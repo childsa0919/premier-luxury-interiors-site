@@ -154,30 +154,60 @@ section {
 }
 .nav-logo-svg {
   display: block;
-  height: 44px;
+  height: 60px;
   width: auto;
   color: currentColor;
+  overflow: visible;
 }
-.nav-logo-door { fill: var(--color-accent); transition: fill var(--transition-interactive); }
-.nav-logo-wordmark {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 68px;
+@media (max-width: 900px) {
+  .nav-logo-svg { height: 48px; }
+}
+
+/* Door mark parts */
+.logo-frame {
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: square;
+  fill: none;
+  transition: stroke var(--transition-interactive);
+}
+.logo-door {
+  fill: var(--color-accent);
+  transition: fill var(--transition-interactive);
+}
+.logo-floor {
+  fill: #d8d2c3;
+  transition: fill var(--transition-interactive);
+}
+.logo-knob {
+  fill: currentColor;
+  opacity: 0.55;
+}
+
+/* Wordmark + tagline — thin geometric sans matching the original logo */
+.logo-wordmark {
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+  font-size: 78px;
   letter-spacing: 11px;
+  fill: currentColor;
+  font-variant-numeric: lining-nums;
 }
-.nav-logo-tagline {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 17px;
-  letter-spacing: 7.5px;
+.logo-tagline {
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 8.5px;
   fill: var(--color-accent);
   transition: fill var(--transition-interactive);
 }
 
-/* Homepage hero state — pure white wordmark over dark image, lighter sage accents */
+/* Homepage hero state — pure white wordmark + frame over dark image, lighter sage accents */
 .site-header.over-hero:not(.scrolled) .nav-logo { color: #ffffff; }
-.site-header.over-hero:not(.scrolled) .nav-logo-door { fill: #b8c7ad; }
-.site-header.over-hero:not(.scrolled) .nav-logo-tagline { fill: #b8c7ad; }
+.site-header.over-hero:not(.scrolled) .logo-frame { stroke: #ffffff; }
+.site-header.over-hero:not(.scrolled) .logo-door { fill: #b8c7ad; }
+.site-header.over-hero:not(.scrolled) .logo-floor { fill: rgba(232, 226, 210, 0.55); }
+.site-header.over-hero:not(.scrolled) .logo-tagline { fill: #b8c7ad; }
 .site-header.over-hero:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.92); }
 .site-header.over-hero:not(.scrolled) .nav-links a:hover { color: #ffffff; }
 .site-header.over-hero:not(.scrolled) .theme-toggle {
