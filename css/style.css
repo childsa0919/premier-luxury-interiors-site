@@ -152,22 +152,34 @@ section {
   color: var(--color-text);
   text-decoration: none;
 }
+.nav-logo {
+  position: relative;
+}
 .nav-logo svg { width: 32px; height: 32px; }
-.nav-logo-text {
-  font-family: var(--font-display);
-  font-size: 1.125rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  line-height: 1;
-}
-.nav-logo-text small {
+.nav-logo-img {
   display: block;
-  font-family: var(--font-body);
-  font-size: 0.625rem;
-  letter-spacing: var(--tracking-widest);
-  color: var(--color-text-muted);
-  margin-top: 2px;
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity var(--transition-interactive);
 }
+.nav-logo-light {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+}
+.nav-logo-dark {
+  opacity: 0;
+}
+/* Default (interior pages): dark logo on light bg */
+.site-header:not(.over-hero) .nav-logo-dark { opacity: 1; }
+.site-header:not(.over-hero) .nav-logo-light { opacity: 0; }
+/* Homepage: light logo over dark hero; swap to dark once scrolled */
+.site-header.over-hero.scrolled .nav-logo-dark { opacity: 1; }
+.site-header.over-hero.scrolled .nav-logo-light { opacity: 0; }
+/* Dark theme — always use light logo */
+[data-theme='dark'] .nav-logo-light { opacity: 1 !important; }
+[data-theme='dark'] .nav-logo-dark { opacity: 0 !important; }
 
 .nav-links {
   display: flex;

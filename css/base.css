@@ -66,18 +66,18 @@
   --color-divider: #d9d3c5;
   --color-border: #c9c1ae;
 
-  --color-text: #14213d;          /* midnight navy as text */
-  --color-text-muted: #5e6276;
-  --color-text-faint: #8c8e9e;
+  --color-text: #2c3434;          /* midnight navy as text */
+  --color-text-muted: #5b6363;
+  --color-text-faint: #8a908e;
   --color-text-inverse: #faf7f1;
 
-  --color-primary: #14213d;        /* midnight navy */
-  --color-primary-hover: #0c1530;
-  --color-primary-active: #060b1c;
+  --color-primary: #2c3434;        /* midnight navy */
+  --color-primary-hover: #1b2121;
+  --color-primary-active: #0e1212;
 
-  --color-accent: #d97757;         /* warm salmon */
-  --color-accent-hover: #c4623f;
-  --color-accent-faint: #f3d9cd;
+  --color-accent: #8fa087;         /* warm salmon */
+  --color-accent-hover: #768a6e;
+  --color-accent-faint: #dde5d8;
 
   --shadow-sm: 0 1px 2px rgba(20, 33, 61, 0.06);
   --shadow-md: 0 8px 24px rgba(20, 33, 61, 0.08);
@@ -88,25 +88,25 @@
    COLOR — Dark mode (midnight)
    ============================================ */
 [data-theme='dark'] {
-  --color-bg: #0a1024;             /* midnight base */
-  --color-surface: #101736;
-  --color-surface-2: #161e42;
-  --color-surface-offset: #1c2550;
-  --color-divider: #243066;
-  --color-border: #2e3a73;
+  --color-bg: #1a1f1e;             /* midnight base */
+  --color-surface: #222827;
+  --color-surface-2: #2a302f;
+  --color-surface-offset: #333a38;
+  --color-divider: #3d4542;
+  --color-border: #4a534f;
 
   --color-text: #ece9df;
-  --color-text-muted: #a0a4b8;
-  --color-text-faint: #6b7090;
-  --color-text-inverse: #14213d;
+  --color-text-muted: #a8aea4;
+  --color-text-faint: #6b7268;
+  --color-text-inverse: #2c3434;
 
   --color-primary: #ece9df;
   --color-primary-hover: #ffffff;
   --color-primary-active: #d6d2c4;
 
-  --color-accent: #e88c70;
-  --color-accent-hover: #f0a48a;
-  --color-accent-faint: #3c2a26;
+  --color-accent: #a8b89e;
+  --color-accent-hover: #c0ceb6;
+  --color-accent-faint: #2a322b;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
@@ -115,22 +115,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --color-bg: #0a1024;
-    --color-surface: #101736;
-    --color-surface-2: #161e42;
-    --color-surface-offset: #1c2550;
-    --color-divider: #243066;
-    --color-border: #2e3a73;
+    --color-bg: #1a1f1e;
+    --color-surface: #222827;
+    --color-surface-2: #2a302f;
+    --color-surface-offset: #333a38;
+    --color-divider: #3d4542;
+    --color-border: #4a534f;
     --color-text: #ece9df;
-    --color-text-muted: #a0a4b8;
-    --color-text-faint: #6b7090;
-    --color-text-inverse: #14213d;
+    --color-text-muted: #a8aea4;
+    --color-text-faint: #6b7268;
+    --color-text-inverse: #2c3434;
     --color-primary: #ece9df;
     --color-primary-hover: #ffffff;
     --color-primary-active: #d6d2c4;
-    --color-accent: #e88c70;
-    --color-accent-hover: #f0a48a;
-    --color-accent-faint: #3c2a26;
+    --color-accent: #a8b89e;
+    --color-accent-hover: #c0ceb6;
+    --color-accent-faint: #2a322b;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
     --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.6);
