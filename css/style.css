@@ -148,66 +148,35 @@ section {
 .nav-logo {
   display: flex;
   align-items: center;
+  position: relative;
   text-decoration: none;
-  color: var(--color-text);
-  transition: color var(--transition-interactive);
 }
-.nav-logo-svg {
+.nav-logo-img {
   display: block;
-  height: 60px;
+  height: 56px;
   width: auto;
-  color: currentColor;
-  overflow: visible;
+  object-fit: contain;
+  transition: opacity var(--transition-interactive);
 }
 @media (max-width: 900px) {
-  .nav-logo-svg { height: 48px; }
+  .nav-logo-img { height: 44px; }
 }
 
-/* Door mark parts */
-.logo-frame {
-  stroke: currentColor;
-  stroke-width: 3;
-  stroke-linecap: square;
-  fill: none;
-  transition: stroke var(--transition-interactive);
+/* Stack the two logo files so we can crossfade between dark/light variants */
+.nav-logo-light {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
 }
-.logo-door {
-  fill: var(--color-accent);
-  transition: fill var(--transition-interactive);
-}
-.logo-floor {
-  fill: #d8d2c3;
-  transition: fill var(--transition-interactive);
-}
-.logo-knob {
-  fill: currentColor;
-  opacity: 0.55;
-}
+.nav-logo-dark { opacity: 1; }
 
-/* Wordmark + tagline — thin geometric sans matching the original logo */
-.logo-wordmark {
-  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
-  font-weight: 200;
-  font-size: 78px;
-  letter-spacing: 11px;
-  fill: currentColor;
-  font-variant-numeric: lining-nums;
-}
-.logo-tagline {
-  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  letter-spacing: 8.5px;
-  fill: var(--color-accent);
-  transition: fill var(--transition-interactive);
-}
+/* Homepage hero state — show the light (white) variant over the dark hero */
+.site-header.over-hero:not(.scrolled) .nav-logo-dark { opacity: 0; }
+.site-header.over-hero:not(.scrolled) .nav-logo-light { opacity: 1; }
 
-/* Homepage hero state — pure white wordmark + frame over dark image, lighter sage accents */
-.site-header.over-hero:not(.scrolled) .nav-logo { color: #ffffff; }
-.site-header.over-hero:not(.scrolled) .logo-frame { stroke: #ffffff; }
-.site-header.over-hero:not(.scrolled) .logo-door { fill: #b8c7ad; }
-.site-header.over-hero:not(.scrolled) .logo-floor { fill: rgba(232, 226, 210, 0.55); }
-.site-header.over-hero:not(.scrolled) .logo-tagline { fill: #b8c7ad; }
+/* Dark theme — always use the light variant */
+[data-theme='dark'] .nav-logo-dark { opacity: 0; }
+[data-theme='dark'] .nav-logo-light { opacity: 1; }
 .site-header.over-hero:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.92); }
 .site-header.over-hero:not(.scrolled) .nav-links a:hover { color: #ffffff; }
 .site-header.over-hero:not(.scrolled) .theme-toggle {
