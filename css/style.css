@@ -148,38 +148,54 @@ section {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  color: var(--color-text);
   text-decoration: none;
+  color: var(--color-text);
+  transition: color var(--transition-interactive);
 }
-.nav-logo {
-  position: relative;
-}
-.nav-logo svg { width: 32px; height: 32px; }
-.nav-logo-img {
+.nav-logo-svg {
   display: block;
   height: 44px;
   width: auto;
-  object-fit: contain;
-  transition: opacity var(--transition-interactive);
+  color: currentColor;
 }
-.nav-logo-light {
-  position: absolute;
-  inset: 0;
-  opacity: 1;
+.nav-logo-door { fill: var(--color-accent); transition: fill var(--transition-interactive); }
+.nav-logo-wordmark {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 68px;
+  letter-spacing: 11px;
 }
-.nav-logo-dark {
-  opacity: 0;
+.nav-logo-tagline {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 7.5px;
+  fill: var(--color-accent);
+  transition: fill var(--transition-interactive);
 }
-/* Default (interior pages): dark logo on light bg */
-.site-header:not(.over-hero) .nav-logo-dark { opacity: 1; }
-.site-header:not(.over-hero) .nav-logo-light { opacity: 0; }
-/* Homepage: light logo over dark hero; swap to dark once scrolled */
-.site-header.over-hero.scrolled .nav-logo-dark { opacity: 1; }
-.site-header.over-hero.scrolled .nav-logo-light { opacity: 0; }
-/* Dark theme — always use light logo */
-[data-theme='dark'] .nav-logo-light { opacity: 1 !important; }
-[data-theme='dark'] .nav-logo-dark { opacity: 0 !important; }
+
+/* Homepage hero state — pure white wordmark over dark image, lighter sage accents */
+.site-header.over-hero:not(.scrolled) .nav-logo { color: #ffffff; }
+.site-header.over-hero:not(.scrolled) .nav-logo-door { fill: #b8c7ad; }
+.site-header.over-hero:not(.scrolled) .nav-logo-tagline { fill: #b8c7ad; }
+.site-header.over-hero:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.92); }
+.site-header.over-hero:not(.scrolled) .nav-links a:hover { color: #ffffff; }
+.site-header.over-hero:not(.scrolled) .theme-toggle {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.45);
+}
+.site-header.over-hero:not(.scrolled) .theme-toggle:hover { border-color: #ffffff; }
+.site-header.over-hero:not(.scrolled) .nav-cta {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.04);
+}
+.site-header.over-hero:not(.scrolled) .nav-cta:hover {
+  background: #ffffff;
+  color: var(--color-primary);
+  border-color: #ffffff;
+}
+.site-header.over-hero:not(.scrolled) .nav-toggle { color: #ffffff; }
 
 .nav-links {
   display: flex;
@@ -314,7 +330,7 @@ section {
 .hero-content {
   position: relative;
   z-index: 1;
-  color: #faf7f1;
+  color: #ffffff;
   width: 100%;
 }
 
@@ -352,13 +368,13 @@ section {
 }
 
 .hero-actions .btn--ghost {
-  color: #faf7f1;
+  color: #ffffff;
   border-color: rgba(250, 247, 241, 0.4);
 }
 .hero-actions .btn--ghost:hover {
-  background: #faf7f1;
+  background: #ffffff;
   color: var(--color-primary);
-  border-color: #faf7f1;
+  border-color: #ffffff;
 }
 
 .hero-meta {
@@ -566,7 +582,7 @@ section {
   bottom: 0; left: 0; right: 0;
   padding: var(--space-6);
   background: linear-gradient(to top, rgba(20, 33, 61, 0.9) 0%, rgba(20, 33, 61, 0) 100%);
-  color: #faf7f1;
+  color: #ffffff;
 }
 .portfolio-caption .place {
   font-size: var(--text-xs);
@@ -579,7 +595,7 @@ section {
   font-size: var(--text-lg);
   font-weight: 400;
   margin-top: var(--space-2);
-  color: #faf7f1;
+  color: #ffffff;
 }
 
 @media (max-width: 760px) {

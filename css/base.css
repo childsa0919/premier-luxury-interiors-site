@@ -59,17 +59,17 @@
    ============================================ */
 :root,
 [data-theme='light'] {
-  --color-bg: #f5f2ec;
+  --color-bg: #fafaf9;
   --color-surface: #ffffff;
-  --color-surface-2: #faf7f1;
-  --color-surface-offset: #eae5db;
-  --color-divider: #d9d3c5;
-  --color-border: #c9c1ae;
+  --color-surface-2: #ffffff;
+  --color-surface-offset: #e8e8e6;
+  --color-divider: #d4d4d2;
+  --color-border: #bcbcba;
 
   --color-text: #2c3434;          /* midnight navy as text */
-  --color-text-muted: #5b6363;
-  --color-text-faint: #8a908e;
-  --color-text-inverse: #faf7f1;
+  --color-text-muted: #4a5050;
+  --color-text-faint: #9ba09e;
+  --color-text-inverse: #ffffff;
 
   --color-primary: #2c3434;        /* midnight navy */
   --color-primary-hover: #1b2121;
@@ -88,12 +88,12 @@
    COLOR — Dark mode (midnight)
    ============================================ */
 [data-theme='dark'] {
-  --color-bg: #1a1f1e;             /* midnight base */
-  --color-surface: #222827;
-  --color-surface-2: #2a302f;
-  --color-surface-offset: #333a38;
-  --color-divider: #3d4542;
-  --color-border: #4a534f;
+  --color-bg: #0e1110;             /* midnight base */
+  --color-surface: #151918;
+  --color-surface-2: #1d2120;
+  --color-surface-offset: #252a28;
+  --color-divider: #2f3431;
+  --color-border: #3a403c;
 
   --color-text: #ece9df;
   --color-text-muted: #a8aea4;
@@ -115,12 +115,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --color-bg: #1a1f1e;
-    --color-surface: #222827;
-    --color-surface-2: #2a302f;
-    --color-surface-offset: #333a38;
-    --color-divider: #3d4542;
-    --color-border: #4a534f;
+    --color-bg: #0e1110;
+    --color-surface: #151918;
+    --color-surface-2: #1d2120;
+    --color-surface-offset: #252a28;
+    --color-divider: #2f3431;
+    --color-border: #3a403c;
     --color-text: #ece9df;
     --color-text-muted: #a8aea4;
     --color-text-faint: #6b7268;

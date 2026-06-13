@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" role="img" aria-label="Premier Luxury Interiors">
+  <!-- Door mark -->
+  <g transform="translate(0,18)">
+    <!-- Frame -->
+    <rect x="6" y="0" width="78" height="104" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    <!-- Open door panel (sage) -->
+    <path d="M14 6 L52 14 L52 96 L14 100 Z" fill="var(--logo-accent, #8fa087)"/>
+    <!-- Knob -->
+    <circle cx="46" cy="56" r="1.8" fill="currentColor"/>
+    <!-- Floor shadow triangle -->
+    <path d="M14 100 L52 96 L78 104 L14 104 Z" fill="currentColor" opacity="0.18"/>
+  </g>
+  <!-- PREMIER wordmark -->
+  <text x="110" y="78"
+        font-family="'Cormorant Garamond','Playfair Display',Georgia,serif"
+        font-weight="400"
+        font-size="68"
+        letter-spacing="11"
+        fill="currentColor">PREMIER</text>
+  <!-- LUXURY INTERIORS sub-line -->
+  <text x="112" y="118"
+        font-family="'Inter','Helvetica Neue',sans-serif"
+        font-weight="500"
+        font-size="17"
+        letter-spacing="7.5"
+        fill="var(--logo-accent, #8fa087)">LUXURY INTERIORS</text>
+</svg>
