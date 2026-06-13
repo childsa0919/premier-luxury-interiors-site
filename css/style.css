@@ -798,6 +798,31 @@ section {
 @media (max-width: 900px) { .feature-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .feature-grid { grid-template-columns: 1fr; } }
 
+/* ---------- Speed section (sitewide) ---------- */
+.speed-section {
+  background: var(--color-surface-alt, #F5F0E8);
+  position: relative;
+}
+[data-theme='dark'] .speed-section {
+  background: rgba(255, 255, 255, 0.03);
+}
+.speed-section .section-head p strong,
+.speed-footnote strong {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+[data-theme='dark'] .speed-section .section-head p strong,
+[data-theme='dark'] .speed-footnote strong {
+  color: var(--color-accent);
+}
+.speed-footnote {
+  text-align: center;
+  margin-top: var(--space-12);
+  font-size: var(--text-base);
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
 /* ============================================
    PRICE BANDS
    ============================================ */
