@@ -1,0 +1,233 @@
+/* ============================================
+   PREMIER LUXURY INTERIORS — DESIGN SYSTEM
+   Midnight navy + salmon accent, editorial luxury
+   ============================================ */
+
+:root {
+  /* Type scale — fluid */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+  --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+  --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+  --text-3xl: clamp(2.5rem, 1rem + 4vw, 5rem);
+  --text-hero: clamp(3rem, 0.5rem + 7vw, 8rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-interactive: 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 600ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Content widths */
+  --content-narrow: 640px;
+  --content-default: 1080px;
+  --content-wide: 1320px;
+
+  /* Fonts */
+  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', 'Helvetica Neue', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Letter spacing */
+  --tracking-widest: 0.24em;
+  --tracking-wide: 0.08em;
+}
+
+/* ============================================
+   COLOR — Light mode (warm porcelain)
+   ============================================ */
+:root,
+[data-theme='light'] {
+  --color-bg: #f5f2ec;
+  --color-surface: #ffffff;
+  --color-surface-2: #faf7f1;
+  --color-surface-offset: #eae5db;
+  --color-divider: #d9d3c5;
+  --color-border: #c9c1ae;
+
+  --color-text: #14213d;          /* midnight navy as text */
+  --color-text-muted: #5e6276;
+  --color-text-faint: #8c8e9e;
+  --color-text-inverse: #faf7f1;
+
+  --color-primary: #14213d;        /* midnight navy */
+  --color-primary-hover: #0c1530;
+  --color-primary-active: #060b1c;
+
+  --color-accent: #d97757;         /* warm salmon */
+  --color-accent-hover: #c4623f;
+  --color-accent-faint: #f3d9cd;
+
+  --shadow-sm: 0 1px 2px rgba(20, 33, 61, 0.06);
+  --shadow-md: 0 8px 24px rgba(20, 33, 61, 0.08);
+  --shadow-lg: 0 24px 56px rgba(20, 33, 61, 0.14);
+}
+
+/* ============================================
+   COLOR — Dark mode (midnight)
+   ============================================ */
+[data-theme='dark'] {
+  --color-bg: #0a1024;             /* midnight base */
+  --color-surface: #101736;
+  --color-surface-2: #161e42;
+  --color-surface-offset: #1c2550;
+  --color-divider: #243066;
+  --color-border: #2e3a73;
+
+  --color-text: #ece9df;
+  --color-text-muted: #a0a4b8;
+  --color-text-faint: #6b7090;
+  --color-text-inverse: #14213d;
+
+  --color-primary: #ece9df;
+  --color-primary-hover: #ffffff;
+  --color-primary-active: #d6d2c4;
+
+  --color-accent: #e88c70;
+  --color-accent-hover: #f0a48a;
+  --color-accent-faint: #3c2a26;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-bg: #0a1024;
+    --color-surface: #101736;
+    --color-surface-2: #161e42;
+    --color-surface-offset: #1c2550;
+    --color-divider: #243066;
+    --color-border: #2e3a73;
+    --color-text: #ece9df;
+    --color-text-muted: #a0a4b8;
+    --color-text-faint: #6b7090;
+    --color-text-inverse: #14213d;
+    --color-primary: #ece9df;
+    --color-primary-hover: #ffffff;
+    --color-primary-active: #d6d2c4;
+    --color-accent: #e88c70;
+    --color-accent-hover: #f0a48a;
+    --color-accent-faint: #3c2a26;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* ============================================
+   RESET + BASE
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--space-20);
+}
+
+body {
+  min-height: 100dvh;
+  line-height: 1.6;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: background-color var(--transition-slow), color var(--transition-slow);
+}
+
+img, picture, video, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul[role='list'], ol[role='list'] { list-style: none; }
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  line-height: 1.1;
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+p, li, figcaption {
+  text-wrap: pretty;
+}
+
+a { color: inherit; text-decoration: none; }
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+a, button, [role='button'], input, textarea, select {
+  transition: color var(--transition-interactive), background var(--transition-interactive),
+    border-color var(--transition-interactive), box-shadow var(--transition-interactive),
+    opacity var(--transition-interactive), transform var(--transition-interactive);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}

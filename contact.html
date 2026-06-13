@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Book a Consultation | Premier Luxury Interiors</title>
+  <meta name="description" content="Book a no-charge luxury remodeling consultation with Premier Luxury Interiors. Serving Washington DC, Maryland, and Northern Virginia.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Contact — Book a Consultation | Premier Luxury Interiors">
+  <meta property="og:description" content="Book a no-charge luxury remodeling consultation with Premier Luxury Interiors. Serving Washington DC, Maryland, and Northern Virginia.">
+  <meta property="og:image" content="/assets/hero-kitchen.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://premierluxuryinteriors.com/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html" aria-label="Premier Luxury Interiors home">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true">
+          <rect x="6" y="6" width="28" height="28" />
+          <path d="M6 6 L34 34 M34 6 L6 34" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="20" cy="20" r="4" fill="currentColor" stroke="none"/>
+        </svg>
+        <span class="nav-logo-text">Premier Luxury<small>Interiors · DC Metro</small></span>
+      </a>
+      <nav>
+        <ul class="nav-links" role="list">
+          <li><a href="kitchens.html">Kitchens</a></li>
+          <li><a href="bathrooms.html">Bathrooms</a></li>
+          <li><a href="interiors.html">Interiors</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+        <a class="nav-cta" href="contact.html">Book Consultation</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-header">
+    <div class="container container--default">
+      <span class="eyebrow">Begin the conversation</span>
+      <h1>Tell us about <em>the project.</em></h1>
+      <p class="lede">Most consultations begin with a short note and a few photos. We respond within one business day to schedule a no-charge home visit. Serious inquiries only — we keep our calendar deliberately small.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container container--default">
+      <div class="contact-layout">
+        <aside class="contact-info">
+          <h3>Direct contact</h3>
+          <div class="contact-info-block">
+            <div class="label">Email</div>
+            <div class="value"><a href="mailto:info@premierluxuryinteriors.com">info@premierluxuryinteriors.com</a></div>
+          </div>
+          <div class="contact-info-block">
+            <div class="label">Studio</div>
+            <div class="value">By appointment only<br>Crofton, MD 21114</div>
+          </div>
+          <div class="contact-info-block">
+            <div class="label">Service Area</div>
+            <div class="value">Washington DC · Bethesda · Chevy Chase · Potomac · Kensington · Crofton · McLean · Great Falls · Arlington · Alexandria</div>
+          </div>
+          <div class="contact-info-block">
+            <div class="label">Press &amp; Trade</div>
+            <div class="value"><a href="mailto:info@premierluxuryinteriors.com">info@premierluxuryinteriors.com</a></div>
+          </div>
+        </aside>
+
+        <form data-contact-form novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="firstName">First name</label>
+              <input id="firstName" name="firstName" type="text" required autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="lastName">Last name</label>
+              <input id="lastName" name="lastName" type="text" required autocomplete="family-name">
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="location">Project location</label>
+              <input id="location" name="location" type="text" placeholder="City, state" required>
+            </div>
+            <div class="field">
+              <label for="service">Service of interest</label>
+              <select id="service" name="service" required>
+                <option value="">Select one</option>
+                <option>Luxury Kitchen</option>
+                <option>Luxury Bathroom · Primary Suite</option>
+                <option>Luxury Bathroom · Powder Room</option>
+                <option>Single-Room Interior</option>
+                <option>Floor / Whole-Home Package</option>
+                <option>Other / Not Sure Yet</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="budget">Anticipated investment</label>
+              <select id="budget" name="budget">
+                <option value="">Select a range (optional)</option>
+                <option>Under $100k</option>
+                <option>$100k – $250k</option>
+                <option>$250k – $500k</option>
+                <option>$500k – $1M</option>
+                <option>$1M+</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="message">Tell us about the project</label>
+              <textarea id="message" name="message" rows="5" placeholder="Rooms, square footage, timeline, what's inspiring you. Photos can follow by email." required></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">Send Inquiry <span class="arrow"></span></button>
+            <span class="form-note">We respond within one business day. Your information stays with our studio.</span>
+          </div>
+          <div class="form-success">
+            Thank you — your inquiry is in. We'll reply by email within one business day to schedule your consultation.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Premier Luxury Interiors</h3>
+        <p>A design-build studio crafting luxury kitchens, bathrooms, and whole-home interiors across Washington DC, Maryland, and Northern Virginia.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="kitchens.html">Kitchens</a></li>
+          <li><a href="bathrooms.html">Bathrooms</a></li>
+          <li><a href="interiors.html">Interiors</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Studio</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@premierluxuryinteriors.com">info@premierluxuryinteriors.com</a></li>
+          <li><span style="color: rgba(250, 247, 241, 0.6); font-size: var(--text-sm);">By appointment</span></li>
+          <li><span style="color: rgba(250, 247, 241, 0.6); font-size: var(--text-sm);">DC · MD · NoVA</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Premier Luxury Interiors. All rights reserved.</span>
+      <span>MHIC pending · Licensed &amp; insured</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>
