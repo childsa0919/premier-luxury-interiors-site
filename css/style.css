@@ -1204,3 +1204,38 @@ section {
     aspect-ratio: 16 / 10;
   }
 }
+
+/* ============================================
+   PORTRAIT SPLIT (for portrait-orientation project photos)
+   ============================================ */
+.split.split--portrait {
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.split-image--portrait {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.split-image--portrait img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 3 / 5;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .split.split--portrait {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  .split-image--portrait {
+    max-width: 100%;
+  }
+  .split-image--portrait img {
+    aspect-ratio: 4 / 5;
+  }
+}
