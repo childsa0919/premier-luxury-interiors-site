@@ -75,17 +75,42 @@
     if (href !== '/' && path.startsWith(href)) a.classList.add('active');
   });
 
-  // Form handler
+  // Form handler — opens user's mail client with a pre-filled inquiry to the studio.
   const form = document.querySelector('[data-contact-form]');
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      const get = (n) => (form.elements.namedItem(n)?.value || '').trim();
+      const first = get('firstName');
+      const last = get('lastName');
+      const email = get('email');
+      const phone = get('phone');
+      const loc = get('location');
+      const service = get('service');
+      const budget = get('budget');
+      const message = get('message');
+      const subject = `New consultation inquiry — ${first} ${last}`.trim();
+      const bodyLines = [
+        `Name: ${first} ${last}`,
+        `Email: ${email}`,
+        phone ? `Phone: ${phone}` : null,
+        loc ? `Project location: ${loc}` : null,
+        service ? `Service of interest: ${service}` : null,
+        budget ? `Anticipated investment: ${budget}` : null,
+        '',
+        'Project details:',
+        message
+      ].filter(Boolean);
+      const mailto = 'mailto:info@premierluxuryinteriors.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(bodyLines.join('\n'));
+      window.location.href = mailto;
       const success = document.querySelector('.form-success');
       if (success) {
         success.classList.add('show');
         success.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
-      form.reset();
     });
   }
 
