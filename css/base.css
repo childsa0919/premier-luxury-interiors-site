@@ -61,23 +61,25 @@
 [data-theme='light'] {
   --color-bg: #fafaf9;
   --color-surface: #ffffff;
-  --color-surface-2: #ffffff;
-  --color-surface-offset: #e8e8e6;
-  --color-divider: #d4d4d2;
-  --color-border: #bcbcba;
+  --color-surface-2: #f2efe8;
+  --color-surface-offset: #e8e5dd;
+  --color-divider: #cfccc4;
+  --color-border: #a8a49a;
 
-  --color-text: #2c3434;          /* midnight navy as text */
-  --color-text-muted: #4a5050;
-  --color-text-faint: #9ba09e;
+  --color-text: #1a1f24;          /* deep midnight — high contrast */
+  --color-text-muted: #3a4148;    /* readable secondary */
+  --color-text-faint: #6b7178;    /* eyebrows / labels — WCAG AA on cream */
   --color-text-inverse: #ffffff;
 
-  --color-primary: #2c3434;        /* midnight navy */
-  --color-primary-hover: #1b2121;
-  --color-primary-active: #0e1212;
+  --color-primary: #0f1620;        /* solid midnight — buttons */
+  --color-primary-hover: #050912;
+  --color-primary-active: #000000;
 
-  --color-accent: #8fa087;         /* warm salmon */
-  --color-accent-hover: #768a6e;
+  --color-accent: #7a8a6f;         /* sage — decorative only, NEVER buttons */
+  --color-accent-hover: #5f6f55;
   --color-accent-faint: #dde5d8;
+
+  --color-on-primary: #f5efe4;     /* cream text on navy buttons */
 
   --shadow-sm: 0 1px 2px rgba(20, 33, 61, 0.06);
   --shadow-md: 0 8px 24px rgba(20, 33, 61, 0.08);
@@ -88,53 +90,31 @@
    COLOR — Dark mode (midnight)
    ============================================ */
 [data-theme='dark'] {
-  --color-bg: #0e1110;             /* midnight base */
-  --color-surface: #151918;
-  --color-surface-2: #1d2120;
-  --color-surface-offset: #252a28;
-  --color-divider: #2f3431;
-  --color-border: #3a403c;
+  --color-bg: #0a1024;             /* brand midnight navy */
+  --color-surface: #131a34;
+  --color-surface-2: #1a2140;
+  --color-surface-offset: #232a4a;
+  --color-divider: #2c3355;
+  --color-border: #4a5170;
 
-  --color-text: #ece9df;
-  --color-text-muted: #a8aea4;
-  --color-text-faint: #6b7268;
-  --color-text-inverse: #2c3434;
+  --color-text: #f0ece2;           /* cream text */
+  --color-text-muted: #c4c0b4;
+  --color-text-faint: #8f8b7f;
+  --color-text-inverse: #0a1024;
 
-  --color-primary: #ece9df;
+  --color-primary: #f0ece2;
   --color-primary-hover: #ffffff;
   --color-primary-active: #d6d2c4;
 
-  --color-accent: #a8b89e;
-  --color-accent-hover: #c0ceb6;
-  --color-accent-faint: #2a322b;
+  --color-accent: #b8c7ae;
+  --color-accent-hover: #d0dcc6;
+  --color-accent-faint: #1e2540;
+
+  --color-on-primary: #0a1024;     /* dark text on cream buttons in dark mode */
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.6);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --color-bg: #0e1110;
-    --color-surface: #151918;
-    --color-surface-2: #1d2120;
-    --color-surface-offset: #252a28;
-    --color-divider: #2f3431;
-    --color-border: #3a403c;
-    --color-text: #ece9df;
-    --color-text-muted: #a8aea4;
-    --color-text-faint: #6b7268;
-    --color-text-inverse: #2c3434;
-    --color-primary: #ece9df;
-    --color-primary-hover: #ffffff;
-    --color-primary-active: #d6d2c4;
-    --color-accent: #a8b89e;
-    --color-accent-hover: #c0ceb6;
-    --color-accent-faint: #2a322b;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.6);
-  }
 }
 
 /* ============================================
