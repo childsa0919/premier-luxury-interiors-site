@@ -21,6 +21,17 @@
     });
   }
 
+  // Announcement banner height -> CSS var (keeps fixed header below it)
+  const announce = document.querySelector('.announce-bar');
+  if (announce) {
+    const setAnnounceH = () => {
+      root.style.setProperty('--announce-h', announce.offsetHeight + 'px');
+    };
+    setAnnounceH();
+    window.addEventListener('resize', setAnnounceH, { passive: true });
+    if (window.ResizeObserver) new ResizeObserver(setAnnounceH).observe(announce);
+  }
+
   // Sticky header scroll behavior
   const header = document.querySelector('.site-header');
   if (header) {

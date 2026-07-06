@@ -125,7 +125,7 @@ section {
 /* ---------- Header / Nav ---------- */
 .site-header {
   position: fixed;
-  top: 0;
+  top: var(--announce-h, 44px);
   left: 0;
   right: 0;
   z-index: 100;
@@ -826,7 +826,7 @@ section {
    INTERIOR PAGE — HEADER STRIP
    ============================================ */
 .page-header {
-  padding-top: calc(var(--space-32) + var(--space-12));
+  padding-top: calc(var(--space-32) + var(--space-12) + var(--announce-h, 44px));
   padding-bottom: var(--space-16);
   border-bottom: 1px solid var(--color-divider);
 }
@@ -1285,4 +1285,120 @@ section {
   .split-image--portrait img {
     aspect-ratio: 4 / 5;
   }
+}
+
+/* ---------- Announcement banner (restrained prestige) ---------- */
+.announce-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 110;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-on-primary) 14%, transparent);
+}
+.announce-bar__inner {
+  max-width: var(--content-wide);
+  margin-inline: auto;
+  padding-block: var(--space-3);
+  padding-inline: clamp(var(--space-5), 4vw, var(--space-12));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  text-align: center;
+  flex-wrap: wrap;
+}
+.announce-bar__eyebrow {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+.announce-bar__text {
+  font-size: var(--text-sm);
+  letter-spacing: 0.01em;
+  color: color-mix(in srgb, var(--color-on-primary) 88%, transparent);
+}
+.announce-bar__text em {
+  font-family: var(--font-display, 'Cormorant Garamond', serif);
+  font-style: italic;
+  font-size: 1.12em;
+  color: var(--color-on-primary);
+}
+.announce-bar__link {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-on-primary);
+  border-bottom: 1px solid var(--color-accent);
+  padding-bottom: 2px;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+.announce-bar__link:hover { opacity: 0.75; }
+@media (max-width: 640px) {
+  .announce-bar__eyebrow { display: none; }
+  .announce-bar__inner { gap: var(--space-3); padding-block: var(--space-3); }
+}
+
+/* ---------- "Now opening" narrative section ---------- */
+.opening {
+  background: var(--color-surface-2);
+  padding-block: clamp(var(--space-20), 12vw, var(--space-32));
+}
+[data-theme='dark'] .opening { background: var(--color-surface); }
+.opening__inner {
+  max-width: 62ch;
+  margin-inline: auto;
+  text-align: center;
+}
+.opening__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.66rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin-bottom: var(--space-6);
+}
+.opening h2 {
+  font-size: var(--text-3xl);
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin-inline: auto;
+  max-width: 20ch;
+}
+.opening h2 em { font-style: italic; color: var(--color-accent); }
+.opening__lede {
+  margin-top: var(--space-6);
+  font-family: var(--font-display, 'Cormorant Garamond', serif);
+  font-size: var(--text-xl);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+.opening__body {
+  margin-top: var(--space-6);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+.opening__body + .opening__body { margin-top: var(--space-4); }
+.opening__rule {
+  width: 48px;
+  height: 1px;
+  background: var(--color-accent);
+  margin: var(--space-10) auto 0;
+}
+.opening__sign {
+  margin-top: var(--space-6);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
 }
