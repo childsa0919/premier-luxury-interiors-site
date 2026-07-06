@@ -771,6 +771,16 @@ section {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+.footer-logo {
+  display: block;
+  width: 220px;
+  height: auto;
+  margin-bottom: var(--space-6);
+  opacity: 0.95;
+}
+@media (max-width: 900px) {
+  .footer-logo { width: 180px; }
+}
 .footer-brand p {
   color: rgba(250, 247, 241, 0.7);
   max-width: 32ch;
