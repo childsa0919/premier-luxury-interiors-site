@@ -14,10 +14,10 @@
 .container--default { max-width: var(--content-default); }
 
 section {
-  padding-block: clamp(var(--space-16), 10vw, var(--space-32));
+  padding-block: clamp(var(--space-12), 6vw, var(--space-20));
 }
 
-.section--tight { padding-block: clamp(var(--space-12), 6vw, var(--space-20)); }
+.section--tight { padding-block: clamp(var(--space-10), 4.5vw, var(--space-16)); }
 
 /* ---------- Eyebrow / labels ---------- */
 .eyebrow {
@@ -468,7 +468,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-12);
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--space-10);
   align-items: end;
 }
 .section-head h2 {
@@ -721,7 +721,7 @@ section {
 /* ---------- CTA band ---------- */
 .cta-band {
   background: var(--color-surface-2);
-  padding-block: clamp(var(--space-20), 12vw, var(--space-32));
+  padding-block: clamp(var(--space-12), 6vw, var(--space-20));
   text-align: center;
 }
 [data-theme='dark'] .cta-band {
@@ -741,7 +741,7 @@ section {
   max-width: 52ch;
   margin-inline: auto;
 }
-.cta-band .btn { margin-top: var(--space-10); }
+.cta-band .btn { margin-top: var(--space-8); }
 
 /* ---------- Footer ---------- */
 .site-footer {
@@ -826,8 +826,8 @@ section {
    INTERIOR PAGE — HEADER STRIP
    ============================================ */
 .page-header {
-  padding-top: calc(var(--space-32) + var(--space-12) + var(--announce-h, 44px));
-  padding-bottom: var(--space-16);
+  padding-top: calc(var(--space-24) + var(--space-10) + var(--announce-h, 44px));
+  padding-bottom: var(--space-12);
   border-bottom: 1px solid var(--color-divider);
 }
 .page-header .eyebrow { margin-bottom: var(--space-6); }
@@ -1107,7 +1107,7 @@ section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-8);
-  padding-block: var(--space-16);
+  padding-block: var(--space-12);
   border-block: 1px solid var(--color-divider);
 }
 .stat .num {
@@ -1348,7 +1348,7 @@ section {
 /* ---------- "Now opening" narrative section ---------- */
 .opening {
   background: var(--color-surface-2);
-  padding-block: clamp(var(--space-20), 12vw, var(--space-32));
+  padding-block: clamp(var(--space-12), 6vw, var(--space-20));
 }
 [data-theme='dark'] .opening { background: var(--color-surface); }
 .opening__inner {
@@ -1392,7 +1392,7 @@ section {
   width: 48px;
   height: 1px;
   background: var(--color-accent);
-  margin: var(--space-10) auto 0;
+  margin: var(--space-8) auto 0;
 }
 .opening__sign {
   margin-top: var(--space-6);
