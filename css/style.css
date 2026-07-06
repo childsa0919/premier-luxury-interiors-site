@@ -151,26 +151,59 @@ section {
 }
 
 .nav-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  position: relative;
+  gap: var(--space-3);
   text-decoration: none;
+  color: inherit;
+}
+.nav-logo-mark {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 56px;
+  flex-shrink: 0;
 }
 .nav-logo-img {
   display: block;
-  height: 56px;
-  width: auto;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   transition: opacity var(--transition-interactive);
 }
+.nav-logo-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  font-family: var(--font-serif, serif);
+  color: var(--color-ink, #111);
+  transition: color var(--transition-interactive);
+}
+.nav-logo-wordmark .nav-wordmark-primary {
+  font-size: 13px;
+  font-weight: 500;
+}
+.nav-logo-wordmark .nav-wordmark-secondary {
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  margin-top: 4px;
+  color: rgba(0,0,0,0.6);
+  font-weight: 400;
+}
 @media (max-width: 900px) {
-  .nav-logo-img { height: 44px; }
+  .nav-logo-mark { width: 34px; height: 44px; }
+  .nav-logo-wordmark .nav-wordmark-primary { font-size: 11px; }
+  .nav-logo-wordmark .nav-wordmark-secondary { display: none; }
+}
+@media (max-width: 520px) {
+  .nav-logo-wordmark { display: none; }
 }
 
 /* Stack the two logo files so we can crossfade between dark/light variants */
 .nav-logo-light {
-  position: absolute;
-  inset: 0;
   opacity: 0;
 }
 .nav-logo-dark { opacity: 1; }
@@ -182,6 +215,10 @@ section {
 /* Dark theme — always use the light variant */
 [data-theme='dark'] .nav-logo-dark { opacity: 0; }
 [data-theme='dark'] .nav-logo-light { opacity: 1; }
+[data-theme='dark'] .nav-logo-wordmark { color: #f0ece2; }
+[data-theme='dark'] .nav-logo-wordmark .nav-wordmark-secondary { color: rgba(240,236,226,0.65); }
+.site-header.over-hero:not(.scrolled) .nav-logo-wordmark { color: #ffffff; }
+.site-header.over-hero:not(.scrolled) .nav-logo-wordmark .nav-wordmark-secondary { color: rgba(255,255,255,0.7); }
 .site-header.over-hero:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.92); }
 .site-header.over-hero:not(.scrolled) .nav-links a:hover { color: #ffffff; }
 .site-header.over-hero:not(.scrolled) .theme-toggle {
