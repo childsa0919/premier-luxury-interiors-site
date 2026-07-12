@@ -1,0 +1,12 @@
+/* Self-hosted latin subsets — THE SPECIMEN (V4) */
+@font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:500;font-display:swap;src:url(./bodoni-500-italic-0.woff2) format('woff2');}
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400;font-display:swap;src:url(./bodoni-400-normal-1.woff2) format('woff2');}
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:500;font-display:swap;src:url(./bodoni-500-normal-2.woff2) format('woff2');}
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:600;font-display:swap;src:url(./bodoni-600-normal-3.woff2) format('woff2');}
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:700;font-display:swap;src:url(./bodoni-700-normal-4.woff2) format('woff2');}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(./grotesk-400-normal-0.woff2) format('woff2');}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(./grotesk-500-normal-1.woff2) format('woff2');}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:600;font-display:swap;src:url(./grotesk-600-normal-2.woff2) format('woff2');}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(./grotesk-700-normal-3.woff2) format('woff2');}
+@font-face{font-family:'Space Mono';font-style:normal;font-weight:400;font-display:swap;src:url(./mono-400-normal-0.woff2) format('woff2');}
+@font-face{font-family:'Space Mono';font-style:normal;font-weight:700;font-display:swap;src:url(./mono-700-normal-1.woff2) format('woff2');}
