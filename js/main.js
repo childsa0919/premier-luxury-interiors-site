@@ -38,7 +38,7 @@
       utm_content: "",
       gclid: "",
       fbclid: "",
-      landing_page: win.location.pathname + win.location.search,
+      landing_page: win.location.href,
       referrer: doc.referrer || ""
     };
 
@@ -430,7 +430,8 @@
         if (!fieldValue("firstName")) return fail("Add your first name.", "firstName");
         if (!fieldValue("lastName")) return fail("Add your last name.", "lastName");
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(fieldValue("email"))) return fail("Enter a valid email address.", "email");
-        if (fieldValue("phone").replace(/\D/g, "").length < 10) return fail("Enter a complete phone number, including area code.", "phone");
+        var phoneDigits = fieldValue("phone").replace(/\D/g, "");
+        if (phoneDigits.length < 10 || phoneDigits.length > 15) return fail("Enter a valid phone number with 10 to 15 digits.", "phone");
         if (!fieldValue("consent")) return fail("Confirm that Premier Luxury Interiors may respond to your inquiry.", "consent");
       }
       return true;

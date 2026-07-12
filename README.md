@@ -16,6 +16,7 @@ Production website for Premier Luxury Interiors, a high-end kitchen and bathroom
 
 - Static HTML, CSS, and JavaScript; no build step
 - Hosted on Render as a Static Site
+- Separate zero-dependency Node lead connector prepared for an always-on Render Web Service
 - Publish directory: `.`
 - Build command: blank
 - Render deploys updates from the GitHub `main` branch
@@ -30,6 +31,7 @@ Open `index.html` directly, or serve the repository root with any static web ser
 index.html          Main single-page experience
 css/site.css        Complete responsive design system
 js/main.js          Motion, navigation, analytics, and consultation flow
+lead-proxy/         Secure server-side HighLevel lead connector and tests
 assets/brand/       Primary brand marks
 assets/fonts/       Self-hosted typefaces
 assets/img/         Responsive image formats
@@ -41,11 +43,14 @@ robots.txt
 
 ## Consultation form
 
-The form is prepared for HighLevel and looks for a secure lead endpoint in the
-empty `<meta data-highlevel-webhook content="">` tag in `index.html`. Once a
-verified endpoint is supplied, set it as the tag's `content` value. The
-endpoint must return JSON `{ "ok": true }` only after HighLevel confirms the
-lead; private API tokens must remain server-side.
+The form is prepared for HighLevel and looks for the public Render connector URL
+in the empty `<meta data-highlevel-webhook content="">` tag in `index.html`.
+Once the connector is deployed and verified, set its `/api/inquiries` URL as the
+tag's `content` value. The endpoint returns JSON `{ "ok": true }` only after
+HighLevel accepts the lead; the private HighLevel webhook remains server-side.
+
+Deployment and workflow mapping instructions are in
+[`lead-proxy/README.md`](lead-proxy/README.md).
 
 Until then, submission opens a pre-filled email to
 `info@premierluxuryinteriors.com` and clearly asks the visitor to send that
