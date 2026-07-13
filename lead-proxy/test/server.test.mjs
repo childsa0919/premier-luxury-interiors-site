@@ -18,6 +18,7 @@ const VALID_INQUIRY = {
   phone: "(301) 555-0147",
   contactPreference: "Phone",
   consent: true,
+  smsConsent: true,
   website: "",
   source: "untrusted source",
   submittedAt: "2000-01-01T00:00:00.000Z",
@@ -120,6 +121,10 @@ test("a valid inquiry is flattened, sanitized, and acknowledged only after upstr
   assert.equal(lead.first_name, "Avery");
   assert.equal(lead.email, "avery@example.com");
   assert.equal(lead.project_type, "Kitchen + Bathroom");
+  assert.equal(lead.sms_consent, true);
+  assert.equal(lead.sms_consent_method, "Optional website checkbox");
+  assert.equal(lead.sms_consent_source_url, "https://premierluxuryinteriors.com/#inquiry");
+  assert.match(lead.sms_consent_recorded_at, /^\d{4}-\d{2}-\d{2}T/);
   assert.equal(lead.source, "Premier Luxury Interiors website");
   assert.equal(lead.utm_source, "google");
   assert.equal(lead.landing_page, "https://premierluxuryinteriors.com/?utm_source=google");
@@ -152,6 +157,7 @@ test("invalid submissions are rejected without reaching HighLevel", async (t) =>
     { ...VALID_INQUIRY, phone: "123" },
     { ...VALID_INQUIRY, phone: "+1 301 555 0147 extension 123456789" },
     { ...VALID_INQUIRY, consent: "true" },
+    { ...VALID_INQUIRY, smsConsent: "true" },
     { ...VALID_INQUIRY, goals: "Too short" }
   ];
 

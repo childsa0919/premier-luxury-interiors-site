@@ -483,6 +483,7 @@
         phone: fieldValue("phone"),
         contactPreference: fieldValue("contactPreference") || "No preference",
         consent: Boolean(fieldValue("consent")),
+        smsConsent: Boolean(fieldValue("smsConsent")),
         website: fieldValue("website"),
         source: "Premier Luxury Interiors website",
         submittedAt: new Date().toISOString(),

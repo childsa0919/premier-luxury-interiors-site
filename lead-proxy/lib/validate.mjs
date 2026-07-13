@@ -146,12 +146,18 @@ export function validateInquiry(body, { now = new Date() } = {}) {
   const firstName = cleanText(body.firstName, { min: 1, max: 80 });
   const lastName = cleanText(body.lastName, { min: 1, max: 80 });
   if (body.consent !== true) throw new ValidationError();
+  if (body.smsConsent !== undefined && typeof body.smsConsent !== "boolean") throw new ValidationError();
+  const smsConsent = body.smsConsent === true;
 
   const inquiry = {
     first_name: firstName,
     last_name: lastName,
     email: emailValue(body.email),
     phone: phoneValue(body.phone),
+    sms_consent: smsConsent,
+    sms_consent_method: smsConsent ? "Optional website checkbox" : "Not provided",
+    sms_consent_recorded_at: smsConsent ? now.toISOString() : "",
+    sms_consent_source_url: smsConsent ? "https://premierluxuryinteriors.com/#inquiry" : "",
     project_type: enumValue(body.projectType, PROJECT_TYPES),
     property_location: cleanText(body.location, { min: 2, max: 120 }),
     project_stage: enumValue(body.stage, PROJECT_STAGES),

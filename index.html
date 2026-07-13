@@ -53,6 +53,14 @@
         "url": "https://premierluxuryinteriors.com",
         "telephone": "+1-301-664-1538",
         "email": "info@premierluxuryinteriors.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1523 Eton Way",
+          "addressLocality": "Crofton",
+          "addressRegion": "MD",
+          "postalCode": "21114",
+          "addressCountry": "US"
+        },
         "description": "High-end kitchen and bathroom remodeling by Premier Luxury Interiors.",
         "makesOffer": [
           {
@@ -554,8 +562,15 @@
                 </label>
                 <label class="consent field--full">
                   <input type="checkbox" name="consent" value="yes" required>
-                  <span>I agree to be contacted about this inquiry.</span>
+                  <span>I agree that Premier Luxury Interiors may contact me by phone or email about this inquiry.</span>
                 </label>
+                <div class="sms-consent field--full">
+                  <label class="consent">
+                    <input type="checkbox" name="smsConsent" value="yes">
+                    <span><strong>Optional SMS consent.</strong> I agree to receive recurring non-marketing text messages from Premier Luxury Interiors about my consultation request, scheduling, and project updates. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out. Consent is not a condition of purchase.</span>
+                  </label>
+                  <p>Review our <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</p>
+                </div>
                 <label class="honeypot" aria-hidden="true">
                   Website
                   <input type="text" name="website" tabindex="-1" autocomplete="off">
@@ -582,7 +597,7 @@
                 Request my consultation
               </button>
             </div>
-            <p class="form-privacy" data-form-state-message aria-live="polite">Your project brief is a draft until you select “Request my consultation.” Your project information will be used to respond to your inquiry.</p>
+            <p class="form-privacy" data-form-state-message aria-live="polite">Your project brief is a draft until you select “Request my consultation.” Your information will be used to respond to your inquiry as described in our <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
           </form>
         </div>
       </section>
@@ -644,9 +659,11 @@
         <a href="tel:+13016641538" data-track="call_click" data-placement="footer">(301) 664-1538</a>
         <a href="mailto:info@premierluxuryinteriors.com" data-track="email_click" data-placement="footer">info@premierluxuryinteriors.com</a>
         <a href="https://premierluxuryinteriors.com">premierluxuryinteriors.com</a>
+        <address>1523 Eton Way<br>Crofton, MD 21114</address>
       </div>
       <div class="footer-bottom">
         <span>© <span data-current-year>2026</span> Premier Luxury Interiors</span>
+        <span class="footer-legal"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms &amp; Conditions</a></span>
         <a href="#top">Back to top ↑</a>
       </div>
     </footer>
